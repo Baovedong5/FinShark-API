@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FinShark.Dtos.Comment;
 
 namespace FinShark.Dtos.Stock
 {
@@ -20,5 +21,7 @@ namespace FinShark.Dtos.Stock
         public string Industry { get; set; } = string.Empty;
 
         public long MarketCap { get; set; }
+
+        public List<CommentDto> Comments { get; set; }
     }
 }
