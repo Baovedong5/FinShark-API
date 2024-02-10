@@ -7,6 +7,7 @@ using FinShark.Dtos.Stock;
 using FinShark.Helpers;
 using FinShark.Interfaces;
 using FinShark.Mappers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,6 +25,7 @@ namespace FinShark.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetAllStock([FromQuery] QueryObject query)
         {
             if (!ModelState.IsValid)
